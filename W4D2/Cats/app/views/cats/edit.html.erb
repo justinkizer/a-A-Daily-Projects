@@ -1,0 +1,39 @@
+<h3>Please edit a cat (OR LEAVE)</h3>
+
+
+<%= render 'form', cat: @cat, action: :edit %>
+
+
+<!-- <form action= <%= cat_url(@cat) %> method="post">
+  <input type="hidden" name ="_method" value="patch">
+  <label>Name: <input type="text" name="cat[name]" value="<%= @cat.name.capitalize %>"></label>
+  <br>
+  <br>
+  <label>Birthday: <input type="date" name="cat[birth_date]" value="<%= @cat.birth_date %>"></label>
+  <br>
+  <br>
+  <label>Color:
+    <select id="color" name="cat[color]">
+      <option value="<%= @cat.color %>" disabled="true" selected="true"><%= @cat.color %> (Current Color)</option>
+      <% Cat.colors.each do |color| %>
+        <option value="<%= color.to_s %>"><%= color.to_s %></option>
+      <% end %>
+    </select>
+  </label>
+  <br>
+  <br>
+  <label>Sex:
+    <% if @cat.sex.upcase == "F" %>
+      M<input type="radio" name="cat[sex]" value="M"> F<input type="radio" name="cat[sex]" value="F" checked>
+    <% else %>
+      M<input type="radio" name=name="cat[sex]" value="M" checked> F<input type="radio" value="F" name="cat[sex]">
+    <% end %>
+  </label>
+  <br>
+  <br>
+  <label for="description">Description:</label>
+  <br>
+  <textarea name="cat[description]" cols="30" rows="10"><%= @cat.description %></textarea>
+  <br>
+  <input type="submit" value="Edit Cat">
+</form> -->

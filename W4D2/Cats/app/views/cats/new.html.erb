@@ -1,0 +1,31 @@
+<h3>Please enter a new cat (OR LEAVE)</h3>
+
+<%= render 'form', action: :new, cat: @cat %>
+
+<!--
+<form action=<%= cats_url(@cat) %> method="post">
+  <label>Name: <input name="cat[name]" type="text"></label>
+  <br>
+  <br>
+  <label>Birthday: <input type="date" name="cat[birth_date]"></label>
+  <br>
+  <br>
+  <label>Color:
+    <select id="color" name="cat[color]">
+      <option value="--Select Color--" disabled="true" selected="true">--Select Color--</option>
+      <% Cat.colors.each do |color| %>
+        <option value="<%= color.to_s %>"><%= color.to_s %></option>
+      <% end %>
+    </select>
+  </label>
+  <br>
+  <br>
+  <label>Sex: M<input type="radio" name="cat[sex]" value="M"> F<input type="radio" name="cat[sex]" value="F"></label>
+  <br>
+  <br>
+  <label for="description">Description:</label>
+  <br>
+  <textarea name="cat[description]" cols="30" rows="10"></textarea>
+  <br>
+  <input type="submit" value="Add Cat">
+</form> -->

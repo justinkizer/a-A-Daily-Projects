@@ -1,0 +1,21 @@
+<h1><%= @cat.name.capitalize %></h1>
+<table bgcolor=<%= @cat.color_code %>>
+  <colgroup>
+    <col span="3">
+    <row span="3">
+  </colgroup>
+  <tr>
+    <th>Age</th>
+    <th>Birthday</th>
+    <th>Color</th>
+    <th>Sex</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><%= @cat.age %></td>
+    <td><%= @cat.birth_date %></td>
+    <td><%= @cat.color %></td>
+    <td><%= @cat.sex.upcase %></td>
+    <td><%= @cat.description %></td>
+  </tr>
+</table>

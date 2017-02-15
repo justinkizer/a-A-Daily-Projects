@@ -1,0 +1,6 @@
+<h1>All of the cats!</h1>
+<ol>
+  <% @cats.each do |catobj| %>
+  <li><a href="<%=cat_url(catobj)%>"><%= catobj.name.capitalize %></a></li>
+  <% end %>
+</ol>
