@@ -11,7 +11,10 @@
       <%= button_to "Logout", session_url , method: :delete %>
     <% else %>
       <%= link_to "Sign Up", new_user_url %> <%= link_to "Sign In", new_session_url %>
+      <br>
     <% end %>
+    <br>
+    <a href="<%= subs_url %>"/>All Subs</a>
     <% if flash[:errors] %>
     <br>
     <ul>

@@ -1,1 +1,9 @@
-Subs Index Page
+<br>
+Look at ALL these awesome Subs!
+<ol>
+  <% Sub.all.each do |sub_el| %>
+    <li><a href="<%= sub_url(sub_el) %>"/><%= sub_el.title %></a></li>
+    <br>
+    <% end %>
+</ol>
+<a href="<%= new_sub_url %>"/>Add Sub</a>

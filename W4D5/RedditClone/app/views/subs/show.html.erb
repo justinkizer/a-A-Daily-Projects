@@ -1,0 +1,10 @@
+<br>
+<%= "Welcome to #{Sub.find(params[:id]).title}" %>
+<br>
+<br>
+<%= "#{Sub.find(params[:id]).description}" %>
+<br>
+<br>
+<a href="<%= edit_sub_url%>"/>Edit Sub</a>
+<br>
+<a href="<%= subs_url %>"/>Back to All Subs</a>

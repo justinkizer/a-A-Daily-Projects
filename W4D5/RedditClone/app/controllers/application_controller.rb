@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
 
   def logout_user!
     current_user.reset_session_token!
+    @current_user = nil
     session[:session_token] = nil
   end
 
@@ -25,6 +26,13 @@ class ApplicationController < ActionController::Base
 
   def must_be_logged_out
     redirect_to subs_url if logged_in?
+  end
+
+  def must_be_logged_in
+    unless logged_in?
+      flash[:errors] = ["You must be logged in to do that!"]
+      redirect_to new_session_url
+    end
   end
 
 end
