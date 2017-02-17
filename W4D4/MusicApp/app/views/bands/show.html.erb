@@ -1,0 +1,11 @@
+<br>
+<h2><%= "Band Name: #{@band.name}" %></h2>
+
+<ol>
+<% @band.albums.each do |album| %>
+    <li><a href="<%= album_url(album.id) %>"/><%= album.name %></a></li>
+    <br>
+<% end %>
+</ol>
+
+<%= render partial: "layouts/edit_item", locals: { location: "Bands"} %>

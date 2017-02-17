@@ -1,0 +1,33 @@
+<% case location
+   when "Bands"
+     edit_url = edit_band_url(@band)
+     destroy_url = band_url(@band)
+     up_level_url = bands_url
+     down_level_url = bands_url #albums_url
+     add_url = new_band_album_url(@band)
+     child_location = "Album"
+   when "Albums"
+     edit_url = edit_album_url(@album)
+     destroy_url = album_url(@album)
+     up_level_url = bands_url
+     down_level_url = bands_url#tracks_url
+     add_url = new_album_track_url(@album)
+     child_location = "Track"
+   when "Tracks"
+     edit_url = edit_track_url
+     destroy_url = track_url
+     up_level_url = bands_url#albums_url
+     down_level_url = bands_url#tracks_url
+     add_url = new_track_url
+   end
+%>
+<br>
+<%= link_to "Edit #{location[0..-2]}", edit_url %>
+<br>
+<%= link_to "Destroy #{location[0..-2]}", destroy_url, method: :delete %>
+<br>
+<%= link_to "Up One Level", up_level_url %>
+<br>
+<%= link_to "Down One Level", down_level_url %>
+<br>
+<%= link_to "Add #{child_location}", add_url %>

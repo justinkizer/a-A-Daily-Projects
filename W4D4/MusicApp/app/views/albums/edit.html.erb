@@ -1,0 +1,10 @@
+<form action="<%= album_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="patch">
+  <h1>Edit Album!</h1>
+  <label for="album_name_field">Album Name</label>
+  <input type="text" name="album[name]" value="">
+  <br>
+  <br>
+  <%= button_to "Submit!", album_url, method: :patch %>
+</form>
