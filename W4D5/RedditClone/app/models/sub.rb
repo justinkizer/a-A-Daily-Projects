@@ -14,15 +14,11 @@ class Sub < ActiveRecord::Base
 
   validates :title, :description, :moderator_id, presence: true
 
-
+  belongs_to :moderator,
+    foreign_key: :moderator_id,
+    class_name: :User,
+    inverse_of: :subs
+  has_many :posts, through: :post_subs, source: :post
+  has_many :post_subs, inverse_of: :sub, dependent: :destroy
 
 end
-
-# A title attribute (required)
-# A url attribute (optional)
-# A content attribute for content text (optional)
-# A sub association to the Sub the Post is submitted to (required)
-# An author association.
-# Again, write all the standard PostsController actions, excepting index (the subs#show can list posts).
-
-# Write posts#edit and posts#update controller actions (and routes) that only the Post author can use.

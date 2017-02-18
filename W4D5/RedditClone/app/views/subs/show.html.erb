@@ -5,6 +5,16 @@
 <%= "#{Sub.find(params[:id]).description}" %>
 <br>
 <br>
+<a href="<%= new_post_url %>"/>Add Post</a>
+<br>
 <a href="<%= edit_sub_url%>"/>Edit Sub</a>
 <br>
 <a href="<%= subs_url %>"/>Back to All Subs</a>
+<br>
+<br>
+Posts:
+<ul>
+  <% Sub.find(params[:id]).posts.each do |post| %>
+    <li><a href="<%= post_url(post) %>"/><%= post.title %></a></li>
+  <% end %>
+</ul>

@@ -19,6 +19,14 @@ class User < ActiveRecord::Base
   validates :password_digest, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
+  has_many :subs,
+    foreign_key: :moderator_id,
+    class_name: :Sub
+
+  has_many :posts,
+    class_name: :Post,
+    foreign_key: :author_id
+
   def self.generate_session_token
     SecureRandom.urlsafe_base64(16)
   end

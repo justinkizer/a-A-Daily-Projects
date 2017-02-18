@@ -1,0 +1,12 @@
+<br>
+<%= "#{Post.find(params[:id]).title}" %>
+<br>
+<br>
+<%= "#{Post.find(params[:id]).content}" %>
+<br>
+<br>
+<%= "By #{Post.find(params[:id]).author.username}, #{Post.find(params[:id]).url}" %>
+<br>
+<br>
+<a href="<%= edit_post_url %>"/>Edit Post</a>
+<br>
