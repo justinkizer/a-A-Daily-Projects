@@ -1,0 +1,9 @@
+<% Goal.all.each do |goal| %>
+
+  <% unless goal.private %>
+    <%= goal.title %>
+    <%= User.find(goal.user_id).username %>
+    <%= goal.content %>
+  <% end %>
+
+<% end %>

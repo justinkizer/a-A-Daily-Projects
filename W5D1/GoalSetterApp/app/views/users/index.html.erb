@@ -1,0 +1,10 @@
+<% Goal.all.each do |goal| %>
+
+  <% if goal.user_id == current_user.id %>
+    <%= goal.title %>
+    <%= User.find(goal.user_id).username %>
+    <%= goal.content %>
+    <%= goal.title %> Complete?: <%= goal.completed?.to_s.capitalize %>
+  <% end %>
+
+<% end %>
