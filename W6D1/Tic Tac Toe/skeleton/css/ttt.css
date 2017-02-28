@@ -1,0 +1,42 @@
+ul {
+  width: 300px;
+  list-style: none;
+}
+
+li {
+  float: left;
+  width: 75px;
+  height: 75px;
+  border: 5px solid black;
+  background: grey;
+}
+
+li:hover {
+  background-color: chartreuse;
+}
+
+.marked {
+  background-color: white;
+  font-size: 75px;
+  font-family: fantasy;
+  text-align: center;
+  line-height: 85px;
+}
+
+.loser {
+  background-color: white;
+  color: red;
+}
+
+.loser:hover {
+  background: white;
+}
+
+.winner:hover {
+  background: green;
+}
+
+.winner {
+  color: white;
+  background-color: green;
+}
