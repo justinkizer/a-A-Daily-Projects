@@ -1,0 +1,20 @@
+.col {
+  box-sizing: border-box;
+  float: left;
+}
+
+/* Attribute selector targeting all elements
+with a class attribute containing 'col-' */
+[class*='col-'] {
+  padding-right: 20px;
+}
+
+[class*='col-']:last-of-type {
+  padding-right: 0px;
+}
+
+@media all and (max-width: 1000px) {
+  [class*='col-'] {
+    width: 100%;
+  }
+}

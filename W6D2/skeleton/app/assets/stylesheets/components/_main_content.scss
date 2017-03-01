@@ -1,0 +1,39 @@
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.by-lines {
+  font-size: 12px;
+  color: $gray;
+}
+
+.comment-links {
+  color: $blue;
+}
+
+ol {
+  list-style: disc;
+}
+
+.subsections {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.crop {
+  height: 100px;
+  width: 160px;
+  object-fit: cover;
+}
+
+.fine-print {
+  font-size: 8px;
+  color: $gray;
+  text-transform: none;
+}

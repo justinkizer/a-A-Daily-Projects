@@ -1,0 +1,23 @@
+.sections-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid $lightest-gray;
+}
+
+.sections-nav li {
+  display: flex;
+  font-size: 13px;
+  background-color: white;
+	border-color: white;
+	color: black;
+	padding: 7px 9px;
+	border-radius: 3px;
+	transition: background-color 0.3s;
+	text-align: center;
+}
+
+.sections-nav li:hover {
+  background-color: $lightest-gray;
+}

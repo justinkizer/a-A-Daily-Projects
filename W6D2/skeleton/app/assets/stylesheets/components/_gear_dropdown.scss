@@ -1,0 +1,59 @@
+// Use the gear_dropdown.png screenshot as a style guide
+
+.gear-dropdown {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  width: 240px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid $light-gray;
+  border-radius: 2px;
+  z-index: 1;
+  color: $dark-gray;
+  box-shadow: -1px 4px 6px 1px rgba(0, 0, 0, 0.09);
+}
+
+.dropdown-subtitle {
+  font-weight: bold;
+  font-family: $sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.gear-dropdown .editions li {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  padding: 3px 0px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.gear-dropdown .editions li:last-child {
+  padding-bottom: 10px;
+  border-bottom: 1px solid $light-gray;
+}
+
+.gear-dropdown .editions li:hover {
+  background-color: $light-gray;
+}
+
+.gear-dropdown .editions li:hover a {
+  text-decoration: none;
+}
+
+.gear-dropdown .help li {
+  margin-top: 10px;
+  padding: 1px 0px;
+}
+
+.gear-dropdown .help a {
+  color: $blue;
+  cursor: pointer;
+}
+
+// Here is an example using rgba colors. Set the rgba values like so: rgba(Red, Green, Blue, Alpha). The Alpha value controls the transparency. Let's make this shadow very transparent.
+//
+// box-shadow: -1px 4px 6px 1px rgba(0, 0, 0, 0.09);
