@@ -23,6 +23,7 @@ class TweetCompose {
 
   handleInput (evt) {
     let inputLength = this.$input.val().length;
+    this.$input = evt.target;
     this.$el.find(".chars-left").text(`You have ${140 - inputLength} characters remaining...`);
   }
 
